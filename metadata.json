@@ -1,0 +1,7 @@
+{
+  "name": "First Aid Plumbing Specialist INC",
+  "description": "Professional plumbing services in Houston and Pearland, TX. Open 24/7 for emergency repairs, installations, and maintenance.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
