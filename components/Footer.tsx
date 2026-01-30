@@ -1,7 +1,7 @@
 
 import React from 'react';
-import { COMPANY, IconMap } from '../constants';
-import { Page } from '../types';
+import { COMPANY, IconMap } from '../constants.tsx';
+import { Page } from '../types.ts';
 
 interface FooterProps {
   setPage: (page: Page) => void;
@@ -11,7 +11,6 @@ const Footer: React.FC<FooterProps> = ({ setPage }) => {
   return (
     <footer className="bg-slate-900 text-slate-300 pt-16 pb-8">
       <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-        {/* Brand */}
         <div className="space-y-6">
           <div className="flex items-center space-x-2">
             <div className="bg-blue-600 p-1.5 rounded">
@@ -24,15 +23,8 @@ const Footer: React.FC<FooterProps> = ({ setPage }) => {
           <p className="text-sm leading-relaxed">
             Professional plumbing solutions for Houston, Pearland, and surrounding areas. Our first-aid approach ensures your plumbing issues are diagnosed accurately and fixed permanently.
           </p>
-          <div className="flex space-x-4">
-             {/* Simple social placeholders */}
-             <div className="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center hover:bg-blue-600 transition-colors cursor-pointer">f</div>
-             <div className="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center hover:bg-blue-400 transition-colors cursor-pointer">t</div>
-             <div className="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center hover:bg-red-600 transition-colors cursor-pointer">y</div>
-          </div>
         </div>
 
-        {/* Links */}
         <div>
           <h3 className="text-white font-bold mb-6 text-lg">Quick Links</h3>
           <ul className="space-y-3 text-sm">
@@ -44,7 +36,6 @@ const Footer: React.FC<FooterProps> = ({ setPage }) => {
           </ul>
         </div>
 
-        {/* Services */}
         <div>
           <h3 className="text-white font-bold mb-6 text-lg">Popular Services</h3>
           <ul className="space-y-3 text-sm">
@@ -56,7 +47,6 @@ const Footer: React.FC<FooterProps> = ({ setPage }) => {
           </ul>
         </div>
 
-        {/* Contact */}
         <div>
           <h3 className="text-white font-bold mb-6 text-lg">Contact Info</h3>
           <ul className="space-y-4 text-sm">

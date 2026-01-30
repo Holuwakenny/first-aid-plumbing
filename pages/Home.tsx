@@ -1,7 +1,7 @@
 
 import React from 'react';
-import { COMPANY, SERVICES, IconMap, GALLERY } from '../constants';
-import { Page } from '../types';
+import { COMPANY, SERVICES, IconMap, GALLERY } from '../constants.tsx';
+import { Page } from '../types.ts';
 import { ShieldCheck, Clock, Award, CheckCircle2 } from 'lucide-react';
 
 interface HomeProps {
@@ -11,7 +11,6 @@ interface HomeProps {
 const Home: React.FC<HomeProps> = ({ setPage }) => {
   return (
     <div>
-      {/* Hero Section */}
       <section className="relative h-[600px] flex items-center overflow-hidden">
         <div className="absolute inset-0">
           <img 
@@ -51,7 +50,6 @@ const Home: React.FC<HomeProps> = ({ setPage }) => {
         </div>
       </section>
 
-      {/* Trust Badges */}
       <section className="bg-white py-12 border-b border-slate-100">
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
@@ -87,7 +85,6 @@ const Home: React.FC<HomeProps> = ({ setPage }) => {
         </div>
       </section>
 
-      {/* Intro Section */}
       <section className="py-20 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div className="relative">
@@ -104,13 +101,6 @@ const Home: React.FC<HomeProps> = ({ setPage }) => {
             <p className="text-slate-600 mb-6 leading-relaxed">
               At First Aid Plumbing Specialist INC, we treat every job with the urgency it deserves. Based in Houston, TX, we are a locally owned and operated business that prioritizes customer satisfaction and quality craftsmanship above all else.
             </p>
-            <ul className="space-y-4 mb-8">
-              {['Residential & Commercial Expertise', 'State-of-the-Art Leak Detection', 'Transparent Upfront Estimates'].map((item) => (
-                <li key={item} className="flex items-center text-slate-700 font-medium">
-                  <CheckCircle2 className="w-5 h-5 text-red-500 mr-3" /> {item}
-                </li>
-              ))}
-            </ul>
             <button 
               onClick={() => setPage('about')}
               className="text-blue-600 font-bold border-b-2 border-blue-600 pb-1 hover:text-blue-700 transition-colors"
@@ -121,7 +111,6 @@ const Home: React.FC<HomeProps> = ({ setPage }) => {
         </div>
       </section>
 
-      {/* Services Preview */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 text-center mb-16">
           <h3 className="text-red-600 font-bold tracking-widest uppercase mb-4">What We Do</h3>
@@ -146,7 +135,6 @@ const Home: React.FC<HomeProps> = ({ setPage }) => {
         </div>
       </section>
 
-      {/* CTA Section */}
       <section className="bg-blue-900 py-16 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-64 h-64 bg-blue-600/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
         <div className="max-w-7xl mx-auto px-4 relative z-10 flex flex-col md:flex-row justify-between items-center text-center md:text-left gap-8">

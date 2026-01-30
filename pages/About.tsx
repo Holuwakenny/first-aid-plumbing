@@ -1,19 +1,17 @@
 
 import React from 'react';
-import { COMPANY, GALLERY } from '../constants';
+import { COMPANY, GALLERY } from '../constants.tsx';
 import { Shield, Clock, Users, Wrench } from 'lucide-react';
 
 const About: React.FC = () => {
   return (
     <div className="py-16">
       <div className="max-w-7xl mx-auto px-4">
-        {/* Header */}
         <div className="mb-16">
           <h1 className="text-5xl font-bold mb-6 text-slate-900">About Our Company</h1>
           <div className="h-1.5 w-24 bg-red-600 mb-8"></div>
         </div>
 
-        {/* Story */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24">
           <div className="space-y-6 text-lg text-slate-600 leading-relaxed">
             <p className="font-bold text-slate-900 italic">
@@ -39,7 +37,6 @@ const About: React.FC = () => {
           </div>
         </div>
 
-        {/* Values */}
         <div className="bg-slate-900 rounded-3xl p-12 text-white">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold mb-4">Why We Stand Out</h2>
@@ -63,12 +60,10 @@ const About: React.FC = () => {
           </div>
         </div>
 
-        {/* Location Info */}
         <div className="mt-24 grid grid-cols-1 lg:grid-cols-3 gap-8">
            <div className="bg-slate-50 p-8 rounded-xl border border-slate-100">
              <h4 className="font-bold text-xl mb-4 text-blue-900">Our Headquarters</h4>
              <p className="text-slate-600">{COMPANY.address}</p>
-             <p className="text-slate-400 text-sm mt-2">{COMPANY.plusCode}</p>
            </div>
            <div className="bg-slate-50 p-8 rounded-xl border border-slate-100">
              <h4 className="font-bold text-xl mb-4 text-blue-900">Service Hours</h4>
@@ -78,7 +73,6 @@ const About: React.FC = () => {
            <div className="bg-slate-50 p-8 rounded-xl border border-slate-100">
              <h4 className="font-bold text-xl mb-4 text-blue-900">Contact Us</h4>
              <p className="text-slate-600">Phone: {COMPANY.phone}</p>
-             <p className="text-slate-600">Email: {COMPANY.email}</p>
            </div>
         </div>
       </div>

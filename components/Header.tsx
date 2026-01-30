@@ -1,8 +1,8 @@
 
 import React, { useState } from 'react';
 import { Menu, X, Phone } from 'lucide-react';
-import { COMPANY } from '../constants';
-import { Page } from '../types';
+import { COMPANY } from '../constants.tsx';
+import { Page } from '../types.ts';
 
 interface HeaderProps {
   currentPage: Page;
@@ -28,7 +28,6 @@ const Header: React.FC<HeaderProps> = ({ currentPage, setPage }) => {
 
   return (
     <header className="sticky top-0 z-50 bg-white shadow-md">
-      {/* Top bar */}
       <div className="bg-red-700 text-white py-2 px-4 text-sm hidden md:block">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           <div className="flex items-center space-x-4">
@@ -58,7 +57,6 @@ const Header: React.FC<HeaderProps> = ({ currentPage, setPage }) => {
           </div>
         </div>
 
-        {/* Desktop Nav */}
         <div className="hidden md:flex items-center space-x-8">
           {navItems.map((item) => (
             <button
@@ -79,13 +77,11 @@ const Header: React.FC<HeaderProps> = ({ currentPage, setPage }) => {
           </a>
         </div>
 
-        {/* Mobile Toggle */}
         <button className="md:hidden text-slate-700" onClick={() => setIsMenuOpen(!isMenuOpen)}>
           {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>
       </nav>
 
-      {/* Mobile Menu */}
       {isMenuOpen && (
         <div className="md:hidden bg-white border-t border-slate-100 py-4 absolute w-full shadow-xl">
           <div className="flex flex-col space-y-4 px-4">

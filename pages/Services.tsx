@@ -1,12 +1,11 @@
 
 import React from 'react';
-import { SERVICES, IconMap, COMPANY } from '../constants';
+import { SERVICES, IconMap, COMPANY } from '../constants.tsx';
 
 const Services: React.FC = () => {
   return (
     <div className="py-16">
       <div className="max-w-7xl mx-auto px-4">
-        {/* Header */}
         <div className="text-center mb-16">
           <h1 className="text-5xl font-bold mb-6 text-slate-900">Our Plumbing Expertise</h1>
           <p className="text-slate-500 max-w-2xl mx-auto text-lg leading-relaxed">
@@ -14,7 +13,6 @@ const Services: React.FC = () => {
           </p>
         </div>
 
-        {/* Detailed Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
           {SERVICES.map((service) => (
             <div key={service.id} className="bg-white p-10 rounded-2xl shadow-sm border border-slate-100 hover:shadow-xl transition-all flex flex-col items-start group">
@@ -23,7 +21,7 @@ const Services: React.FC = () => {
               </div>
               <h3 className="text-2xl font-bold mb-4 text-slate-900">{service.title}</h3>
               <p className="text-slate-600 mb-8 leading-relaxed">
-                {service.description} We use professional-grade materials and verify all work meets Houston building codes for maximum safety and durability.
+                {service.description} We use professional-grade materials and verify all work meets local building codes for maximum safety and durability.
               </p>
               <div className="mt-auto pt-6 border-t border-slate-50 w-full flex justify-between items-center">
                 <span className="text-xs font-bold text-slate-400 uppercase tracking-widest">Starting at Competitive Rates</span>
@@ -33,7 +31,6 @@ const Services: React.FC = () => {
           ))}
         </div>
 
-        {/* Why Maintenance Section */}
         <div className="bg-blue-50 rounded-3xl p-12 flex flex-col lg:flex-row items-center gap-12">
           <div className="lg:w-1/2">
              <h2 className="text-3xl font-bold mb-6 text-blue-900 leading-tight">Preventive Maintenance: <br/>Save Money Before the Leak Starts</h2>
@@ -52,14 +49,6 @@ const Services: React.FC = () => {
              <div className="bg-white p-6 rounded-xl shadow-sm">
                 <h4 className="font-bold text-blue-600 text-lg mb-2">Longevity</h4>
                 <p className="text-xs text-slate-500">Extend the life of your expensive appliances like water heaters.</p>
-             </div>
-             <div className="bg-white p-6 rounded-xl shadow-sm">
-                <h4 className="font-bold text-blue-600 text-lg mb-2">Health</h4>
-                <p className="text-xs text-slate-500">Prevent mold and mildew growth from hidden moisture.</p>
-             </div>
-             <div className="bg-white p-6 rounded-xl shadow-sm">
-                <h4 className="font-bold text-blue-600 text-lg mb-2">Resale Value</h4>
-                <p className="text-xs text-slate-500">Well-maintained plumbing is a huge asset when selling your home.</p>
              </div>
           </div>
         </div>
